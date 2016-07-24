@@ -31,6 +31,11 @@ class LoginViewController: BaseViewController,UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         return textField.resignFirstResponder()
     }
+    func textFieldDidBeginEditing(textField: UITextField) {
+        if isSideMenuOpen(){
+           hideSideMenuView()
+        }
+    }
 
     /*
     // MARK: - Navigation

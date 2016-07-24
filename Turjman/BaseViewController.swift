@@ -36,6 +36,9 @@ class BaseViewController: UIViewController,ENSideMenuDelegate {
         navigationController!.navigationBar.barTintColor = UIColor.blueColor()
     }
  
+    func sideMenuWillOpen() {
+        view.endEditing(true)
+    }
    
 
     /*
