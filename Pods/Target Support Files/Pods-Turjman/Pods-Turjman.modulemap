@@ -1,0 +1,6 @@
+framework module Pods_Turjman {
+  umbrella header "Pods-Turjman-umbrella.h"
+
+  export *
+  module * { export * }
+}

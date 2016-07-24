@@ -1,25 +1,148 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9N4-KM-K8X">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Main Navigation Controller-->
+        <scene sceneID="NA4-MN-OzZ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="9N4-KM-K8X" customClass="MainNavigationController" customModule="Turjman" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yc0-eT-mwR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OLB-ry-dMp" kind="relationship" relationship="rootViewController" id="SMO-z6-CPG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YeV-8U-jo7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65" y="360"/>
+        </scene>
+        <!--Sign In-->
+        <scene sceneID="3qD-4q-3cJ">
+            <objects>
+                <viewController id="OLB-ry-dMp" customClass="LoginViewController" customModule="Turjman" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="6Py-Mc-GH1"/>
+                        <viewControllerLayoutGuide type="bottom" id="vXp-jh-uPy"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="BTg-7d-qlJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vss-dq-iPJ">
+                                <rect key="frame" x="20" y="229" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OLB-ry-dMp" id="MOd-tN-x4C"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yYf-n6-LdS">
+                                <rect key="frame" x="20" y="279" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OLB-ry-dMp" id="jSn-VA-B7p"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DEy-Ok-lao">
+                                <rect key="frame" x="453" y="317" width="127" height="30"/>
+                                <state key="normal" title="Forgot Password ?">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeE-B8-qW2" customClass="TurjmanButton" customModule="Turjman" customModuleProvider="target">
+                                <rect key="frame" x="265" y="355" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="aGT-TT-RiQ"/>
+                                </constraints>
+                                <state key="normal" title="SIGN IN"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2L-FI-JvU" customClass="TurjmanButton" customModule="Turjman" customModuleProvider="target">
+                                <rect key="frame" x="115" y="405" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="1Ps-mW-N0s"/>
+                                </constraints>
+                                <state key="normal" title="SIGN UP"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhX-Bb-4Zy" customClass="TurjmanButton" customModule="Turjman" customModuleProvider="target">
+                                <rect key="frame" x="415" y="405" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="FNY-4S-Pkp"/>
+                                </constraints>
+                                <state key="normal" title="Google"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vss-dq-iPJ" firstAttribute="leading" secondItem="BTg-7d-qlJ" secondAttribute="leading" constant="20" id="2oW-jH-0j9"/>
+                            <constraint firstItem="mhX-Bb-4Zy" firstAttribute="centerY" secondItem="r2L-FI-JvU" secondAttribute="centerY" id="3yY-XM-fNC"/>
+                            <constraint firstItem="yYf-n6-LdS" firstAttribute="top" secondItem="vss-dq-iPJ" secondAttribute="bottom" constant="20" id="EXl-ZU-T8g"/>
+                            <constraint firstItem="WeE-B8-qW2" firstAttribute="centerX" secondItem="BTg-7d-qlJ" secondAttribute="centerX" id="Ft5-OO-lZ9"/>
+                            <constraint firstItem="DEy-Ok-lao" firstAttribute="top" secondItem="yYf-n6-LdS" secondAttribute="bottom" constant="8" id="IcK-wH-gDz"/>
+                            <constraint firstItem="WeE-B8-qW2" firstAttribute="top" secondItem="DEy-Ok-lao" secondAttribute="bottom" constant="8" id="K9u-xf-Cc7"/>
+                            <constraint firstItem="yYf-n6-LdS" firstAttribute="leading" secondItem="BTg-7d-qlJ" secondAttribute="leading" constant="20" id="LqZ-IK-fpV"/>
+                            <constraint firstItem="r2L-FI-JvU" firstAttribute="centerX" secondItem="BTg-7d-qlJ" secondAttribute="centerX" constant="0.25" id="Lu0-Ar-xG4"/>
+                            <constraint firstItem="vss-dq-iPJ" firstAttribute="top" secondItem="6Py-Mc-GH1" secondAttribute="bottom" constant="165" id="LyU-P4-aAm"/>
+                            <constraint firstAttribute="trailing" secondItem="DEy-Ok-lao" secondAttribute="trailing" constant="20" id="Pfs-Je-plt"/>
+                            <constraint firstAttribute="trailing" secondItem="yYf-n6-LdS" secondAttribute="trailing" constant="20" id="bUw-c8-foc"/>
+                            <constraint firstItem="r2L-FI-JvU" firstAttribute="centerY" secondItem="BTg-7d-qlJ" secondAttribute="centerY" id="mDa-8E-VT9"/>
+                            <constraint firstItem="r2L-FI-JvU" firstAttribute="centerX" secondItem="BTg-7d-qlJ" secondAttribute="centerX" multiplier="0.5" id="o5P-yQ-Ooq"/>
+                            <constraint firstAttribute="trailing" secondItem="vss-dq-iPJ" secondAttribute="trailing" constant="20" id="oNP-Sn-ObI"/>
+                            <constraint firstItem="r2L-FI-JvU" firstAttribute="top" secondItem="WeE-B8-qW2" secondAttribute="bottom" constant="20" id="ux6-8e-Zuj"/>
+                            <constraint firstItem="mhX-Bb-4Zy" firstAttribute="centerX" secondItem="BTg-7d-qlJ" secondAttribute="centerX" multiplier="1.5" id="vXH-34-0ZR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Lu0-Ar-xG4"/>
+                                <exclude reference="mDa-8E-VT9"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Sign In" id="46W-NO-3LE">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="qsg-Vp-daq">
+                            <connections>
+                                <action selector="toggleSideMenu:" destination="OLB-ry-dMp" id="Xa0-gF-x49"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SqM-uh-dWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="683" y="360"/>
+        </scene>
+        <!--Menu Table View Controller-->
+        <scene sceneID="fqC-tI-xEU">
+            <objects>
+                <tableViewController id="zbP-MU-EMd" customClass="MenuTableViewController" customModule="Turjman" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Zc-RS-i7q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mwL-pG-jIP">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mwL-pG-jIP" id="zV5-32-KEj">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zbP-MU-EMd" id="nFh-ae-9FO"/>
+                            <outlet property="delegate" destination="zbP-MU-EMd" id="RDC-M9-wYI"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pZ4-uv-nfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1343" y="360"/>
         </scene>
     </scenes>
 </document>

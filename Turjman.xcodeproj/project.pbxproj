@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7944B25F1D45568C00F2C008 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7944B25E1D45568C00F2C008 /* BaseViewController.swift */; };
+		7944B2611D455D2D00F2C008 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7944B2601D455D2D00F2C008 /* LoginViewController.swift */; };
+		7944B2671D455EED00F2C008 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7944B2661D455EED00F2C008 /* MainNavigationController.swift */; };
+		7944B26D1D45625E00F2C008 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7944B26C1D45625E00F2C008 /* MenuTableViewController.swift */; };
+		7944B2701D456ACB00F2C008 /* TurjmanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7944B26F1D456ACB00F2C008 /* TurjmanButton.swift */; };
 		797344371D450707009ABAFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797344361D450707009ABAFC /* AppDelegate.swift */; };
-		797344391D450707009ABAFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797344381D450707009ABAFC /* ViewController.swift */; };
 		7973443C1D450707009ABAFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7973443A1D450707009ABAFC /* Main.storyboard */; };
 		7973443E1D450707009ABAFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7973443D1D450707009ABAFC /* Assets.xcassets */; };
 		797344411D450707009ABAFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7973443F1D450707009ABAFC /* LaunchScreen.storyboard */; };
+		C9FAB9E69C48DED6168D8CFA /* Pods_Turjman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458CD914EF4C7D35D5ACDC16 /* Pods_Turjman.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		458CD914EF4C7D35D5ACDC16 /* Pods_Turjman.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Turjman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7944B25E1D45568C00F2C008 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		7944B2601D455D2D00F2C008 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7944B2661D455EED00F2C008 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		7944B26C1D45625E00F2C008 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		7944B26F1D456ACB00F2C008 /* TurjmanButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurjmanButton.swift; sourceTree = "<group>"; };
 		797344331D450707009ABAFC /* Turjman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turjman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797344361D450707009ABAFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		797344381D450707009ABAFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7973443B1D450707009ABAFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7973443D1D450707009ABAFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		797344401D450707009ABAFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		797344421D450707009ABAFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A9FC309B3AC0B2BD052CED4 /* Pods-Turjman.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turjman.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Turjman/Pods-Turjman.debug.xcconfig"; sourceTree = "<group>"; };
+		C21BFB8ECC03CF1392F1923B /* Pods-Turjman.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turjman.release.xcconfig"; path = "Pods/Target Support Files/Pods-Turjman/Pods-Turjman.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9FAB9E69C48DED6168D8CFA /* Pods_Turjman.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F07DC501E64F88C0AD88D93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A9FC309B3AC0B2BD052CED4 /* Pods-Turjman.debug.xcconfig */,
+				C21BFB8ECC03CF1392F1923B /* Pods-Turjman.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7944B25C1D45566100F2C008 /* Presenation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				7944B25D1D45566B00F2C008 /* View Controllers */,
+			);
+			name = "Presenation Layer";
+			sourceTree = "<group>";
+		};
+		7944B25D1D45566B00F2C008 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7944B25E1D45568C00F2C008 /* BaseViewController.swift */,
+				7944B2601D455D2D00F2C008 /* LoginViewController.swift */,
+				7944B2661D455EED00F2C008 /* MainNavigationController.swift */,
+				7944B26C1D45625E00F2C008 /* MenuTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7944B26E1D456AAB00F2C008 /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				7944B26F1D456ACB00F2C008 /* TurjmanButton.swift */,
+			);
+			name = CustomComponents;
+			sourceTree = "<group>";
+		};
 		7973442A1D450707009ABAFC = {
 			isa = PBXGroup;
 			children = (
 				797344351D450707009ABAFC /* Turjman */,
 				797344341D450707009ABAFC /* Products */,
+				2F07DC501E64F88C0AD88D93 /* Pods */,
+				C787C38EFA62FB9ACAF25EA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +105,23 @@
 		797344351D450707009ABAFC /* Turjman */ = {
 			isa = PBXGroup;
 			children = (
+				7944B26E1D456AAB00F2C008 /* CustomComponents */,
+				7944B25C1D45566100F2C008 /* Presenation Layer */,
 				797344361D450707009ABAFC /* AppDelegate.swift */,
-				797344381D450707009ABAFC /* ViewController.swift */,
 				7973443A1D450707009ABAFC /* Main.storyboard */,
 				7973443D1D450707009ABAFC /* Assets.xcassets */,
 				7973443F1D450707009ABAFC /* LaunchScreen.storyboard */,
 				797344421D450707009ABAFC /* Info.plist */,
 			);
 			path = Turjman;
+			sourceTree = "<group>";
+		};
+		C787C38EFA62FB9ACAF25EA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				458CD914EF4C7D35D5ACDC16 /* Pods_Turjman.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 797344451D450707009ABAFC /* Build configuration list for PBXNativeTarget "Turjman" */;
 			buildPhases = (
+				678B8B9427A133412830036B /* [CP] Check Pods Manifest.lock */,
 				7973442F1D450707009ABAFC /* Sources */,
 				797344301D450707009ABAFC /* Frameworks */,
 				797344311D450707009ABAFC /* Resources */,
+				544939C934D97C1194F3B283 /* [CP] Embed Pods Frameworks */,
+				651FB2D831568209BE268962 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,13 +193,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		544939C934D97C1194F3B283 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Turjman/Pods-Turjman-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		651FB2D831568209BE268962 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Turjman/Pods-Turjman-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		678B8B9427A133412830036B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7973442F1D450707009ABAFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				797344391D450707009ABAFC /* ViewController.swift in Sources */,
+				7944B2611D455D2D00F2C008 /* LoginViewController.swift in Sources */,
 				797344371D450707009ABAFC /* AppDelegate.swift in Sources */,
+				7944B26D1D45625E00F2C008 /* MenuTableViewController.swift in Sources */,
+				7944B2671D455EED00F2C008 /* MainNavigationController.swift in Sources */,
+				7944B25F1D45568C00F2C008 /* BaseViewController.swift in Sources */,
+				7944B2701D456ACB00F2C008 /* TurjmanButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +364,7 @@
 		};
 		797344461D450707009ABAFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A9FC309B3AC0B2BD052CED4 /* Pods-Turjman.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Turjman/Info.plist;
@@ -261,6 +377,7 @@
 		};
 		797344471D450707009ABAFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C21BFB8ECC03CF1392F1923B /* Pods-Turjman.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Turjman/Info.plist;
@@ -290,6 +407,7 @@
 				797344471D450707009ABAFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
