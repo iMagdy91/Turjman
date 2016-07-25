@@ -9,12 +9,13 @@
 import UIKit
 import ENSwiftSideMenu
 
-class BaseViewController: UIViewController,ENSideMenuDelegate {
+class BaseViewController: UIViewController,ENSideMenuDelegate,UITextFieldDelegate {
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sideMenuController()?.sideMenu?.delegate = self
+        customizeNavigationBar()
         // Do any additional setup after loading the view.
     }
 
@@ -32,7 +33,8 @@ class BaseViewController: UIViewController,ENSideMenuDelegate {
     
     func customizeNavigationBar() {
         let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        navigationController!.navigationBar.titleTextAttributes = titleDict as! [String : AnyObject]
+        navigationController!.navigationBar.titleTextAttributes = titleDict as? [String : AnyObject]
+        navigationController!.navigationBar.tintColor = UIColor.whiteColor()
         navigationController!.navigationBar.barTintColor = UIColor.blueColor()
     }
  
@@ -40,6 +42,15 @@ class BaseViewController: UIViewController,ENSideMenuDelegate {
         view.endEditing(true)
     }
    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
+    func textFieldDidBeginEditing(textField: UITextField) {
+        if isSideMenuOpen(){
+            hideSideMenuView()
+        }
+    }
+
 
     /*
     // MARK: - Navigation

@@ -9,11 +9,10 @@
 import UIKit
 import ENSwiftSideMenu
 
-class LoginViewController: BaseViewController,UITextFieldDelegate {
+class LoginViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        customizeNavigationBar()
         // Do any additional setup after loading the view.
     }
 
@@ -28,14 +27,6 @@ class LoginViewController: BaseViewController,UITextFieldDelegate {
         toggleSideMenuView()
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        return textField.resignFirstResponder()
-    }
-    func textFieldDidBeginEditing(textField: UITextField) {
-        if isSideMenuOpen(){
-           hideSideMenuView()
-        }
-    }
 
     /*
     // MARK: - Navigation
