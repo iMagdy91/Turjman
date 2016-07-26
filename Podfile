@@ -4,7 +4,8 @@ use_frameworks!
 target "Turjman" do
 
 pod 'ENSwiftSideMenu'
-
+pod 'AlamofireObjectMapper'
+pod 'Alamofire'
 
 end
 

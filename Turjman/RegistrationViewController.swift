@@ -39,6 +39,13 @@ class RegistrationViewController: BaseViewController,UIScrollViewDelegate {
             
         }
     }
+    @IBAction func selectCountryButtonPressed(sender: UIButton) {
+        RegistrationStore .getCountriesListWithSuccess({ (model) in
+            
+            }) { (error) in
+                
+        }
+    }
 
     func validateFields() -> String? {
         guard let nameText = nameTextField.text where !nameText.isEmpty else {

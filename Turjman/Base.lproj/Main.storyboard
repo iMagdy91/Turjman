@@ -203,6 +203,13 @@
                                                     <action selector="registerButtonPressed:" destination="zbR-It-4LW" eventType="touchUpInside" id="Hj6-oA-vB8"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mG1-dK-5HT">
+                                                <rect key="frame" x="8" y="274" width="584" height="30"/>
+                                                <state key="normal" title="Select Country"/>
+                                                <connections>
+                                                    <action selector="selectCountryButtonPressed:" destination="zbR-It-4LW" eventType="touchUpInside" id="UqK-7E-r4b"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
@@ -212,11 +219,13 @@
                                             <constraint firstItem="J0H-Cb-bug" firstAttribute="leading" secondItem="Xak-U9-DXu" secondAttribute="leading" constant="8" id="BSe-Vs-RrE"/>
                                             <constraint firstItem="Og2-zH-bAM" firstAttribute="leading" secondItem="Xak-U9-DXu" secondAttribute="leading" constant="8" id="E7m-xC-Aox"/>
                                             <constraint firstAttribute="trailing" secondItem="Og2-zH-bAM" secondAttribute="trailing" constant="8" id="FdF-Y2-JTq"/>
+                                            <constraint firstItem="mG1-dK-5HT" firstAttribute="top" secondItem="xfV-lW-4n1" secondAttribute="bottom" constant="8" id="GyS-TX-Bry"/>
                                             <constraint firstItem="LZX-Ry-7xg" firstAttribute="centerX" secondItem="Xak-U9-DXu" secondAttribute="centerX" id="HC7-FJ-Wm0"/>
                                             <constraint firstAttribute="trailing" secondItem="AvR-hV-L8x" secondAttribute="trailing" constant="8" id="KTp-gc-Ton"/>
                                             <constraint firstAttribute="trailing" secondItem="DDC-wW-Vch" secondAttribute="trailing" constant="8" id="SlC-ZY-oHZ"/>
                                             <constraint firstAttribute="trailing" secondItem="xfV-lW-4n1" secondAttribute="trailing" constant="8" id="Uxu-f4-FUR"/>
                                             <constraint firstAttribute="bottom" secondItem="LZX-Ry-7xg" secondAttribute="bottom" constant="50" id="XEb-JD-Nco"/>
+                                            <constraint firstAttribute="trailing" secondItem="mG1-dK-5HT" secondAttribute="trailing" constant="8" id="b61-a3-vky"/>
                                             <constraint firstItem="AvR-hV-L8x" firstAttribute="top" secondItem="Uy1-uc-XQJ" secondAttribute="bottom" constant="8" id="b9k-Ak-hyj"/>
                                             <constraint firstItem="Uy1-uc-XQJ" firstAttribute="leading" secondItem="Xak-U9-DXu" secondAttribute="leading" constant="8" id="bdv-Ir-VNW"/>
                                             <constraint firstItem="wmF-fG-5Ko" firstAttribute="top" secondItem="DDC-wW-Vch" secondAttribute="bottom" constant="8" id="fhc-Xc-9Fv"/>
@@ -228,6 +237,7 @@
                                             <constraint firstAttribute="trailing" secondItem="Uy1-uc-XQJ" secondAttribute="trailing" constant="8" id="oCe-Zv-Doa"/>
                                             <constraint firstItem="J0H-Cb-bug" firstAttribute="top" secondItem="Xak-U9-DXu" secondAttribute="top" constant="8" id="pg1-tF-qdk"/>
                                             <constraint firstItem="Og2-zH-bAM" firstAttribute="top" secondItem="wmF-fG-5Ko" secondAttribute="bottom" constant="8" id="pss-IW-B7y"/>
+                                            <constraint firstItem="mG1-dK-5HT" firstAttribute="leading" secondItem="Xak-U9-DXu" secondAttribute="leading" constant="8" id="q6w-9t-yK5"/>
                                             <constraint firstItem="AvR-hV-L8x" firstAttribute="leading" secondItem="Xak-U9-DXu" secondAttribute="leading" constant="8" id="teB-Ed-yJx"/>
                                             <constraint firstAttribute="trailing" secondItem="J0H-Cb-bug" secondAttribute="trailing" constant="8" id="zaX-Ba-z4w"/>
                                         </constraints>

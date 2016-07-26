@@ -10,4 +10,5 @@ import Foundation
 
 struct Network {
    static let baseURL = "http://torjoman.com/dev-test/wp-content/themes/Avada/automatic/mobile-api/"
+    static let countriesPath = "countries_list.php"
 }
