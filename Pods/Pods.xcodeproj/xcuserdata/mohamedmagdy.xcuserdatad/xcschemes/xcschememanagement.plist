@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,9 +34,19 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SBPickerSelector.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>008F021D7A89A919B52C02142D39B8C9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5E40B80F0FA7BDA9FBB0AB7DDCD07249</key>
 		<dict>
 			<key>primary</key>
@@ -47,7 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C99EE9098E4E4C75D2733F17829C8C0E</key>
+		<key>DE490A5265FB20C680DBC346ACD3A38B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E61CE3B6DFA1FE6B3E296965C76C0E10</key>
 		<dict>
 			<key>primary</key>
 			<true/>

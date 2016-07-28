@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import SBPickerSelector
+import MBProgressHUD
 
-class RegistrationViewController: BaseViewController,UIScrollViewDelegate {
+class RegistrationViewController: BaseViewController,UIScrollViewDelegate,SBPickerSelectorDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var companyNameTextField: UITextField!
@@ -17,6 +19,10 @@ class RegistrationViewController: BaseViewController,UIScrollViewDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var selectCountryButton: UIButton!
+    
+    var countriesArray: Array<CountriesModel>?
+    var selectedCountry: CountriesModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,19 +37,31 @@ class RegistrationViewController: BaseViewController,UIScrollViewDelegate {
     
     @IBAction func registerButtonPressed(sender: TurjmanButton) {
         if let errorMessage = validateFields() {
-            let alert = UIAlertController(title: "Validation Error", message: errorMessage, preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            showErrorMessage(errorMessage, title: "Validation Error")
         }
         else {
-            
+            RegistrationStore.registerUserWithFirstName(nameTextField.text!, company: companyNameTextField.text!, phoneCode: phoneCodeTextField.text, phone: contactPhoneTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, countryID: "10", iemeiNumber: Device.udid, success: { (userID) in
+                
+                }, failure: { (error) in
+                    
+                }, businessFailure: { (busniessError) in
+                    
+            })
         }
     }
     @IBAction func selectCountryButtonPressed(sender: UIButton) {
+        view.endEditing(true)
+        MBProgressHUD.showHUDAddedTo(view, animated: true)
         RegistrationStore .getCountriesListWithSuccess({ (model) in
-            
+            MBProgressHUD.hideHUDForView(self.view, animated: true)
+            self.countriesArray = model
+            self.presentCountriesPicker()
+
             }) { (error) in
-                
+                if let currentError = error{
+                    self.showErrorMessage(currentError.description, title: "Error")
+                    
+                }
         }
     }
 
@@ -73,6 +91,30 @@ class RegistrationViewController: BaseViewController,UIScrollViewDelegate {
     
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         view.endEditing(true)
+    }
+    
+    func presentCountriesPicker() {
+        let countries = self.countriesArray!.map {$0.countryName!}
+       
+        
+        let picker: SBPickerSelector = SBPickerSelector.picker()
+        picker.pickerData = countries
+        picker.delegate = self
+        picker.pickerType = SBPickerSelectorType.Text
+        picker.doneButtonTitle = "Done"
+        picker.cancelButtonTitle = "Cancel"
+
+        let point: CGPoint = view.convertPoint(view.frame.origin, fromView: view)
+        var frame: CGRect = view.frame
+        frame.origin = point
+        picker.showPickerIpadFromRect(frame, inView: view)
+       
+    
+    }
+    
+    func pickerSelector(selector: SBPickerSelector!, selectedValue value: String!, index idx: Int) {
+        selectedCountry = countriesArray![idx]
+        selectCountryButton.setTitle(value, forState: .Normal)
     }
     /*
     // MARK: - Navigation

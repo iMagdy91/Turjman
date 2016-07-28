@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		790970C31D4AB79000EEAFB1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790970C21D4AB79000EEAFB1 /* User.swift */; };
+		790970C51D4AB95200EEAFB1 /* TurjmanError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790970C41D4AB95200EEAFB1 /* TurjmanError.swift */; };
 		792AD53E1D46965A00BF778D /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AD53D1D46965A00BF778D /* NetworkConstants.swift */; };
 		792AD5401D4697BD00BF778D /* RegistrationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AD53F1D4697BD00BF778D /* RegistrationStore.swift */; };
 		792AD5461D4699F700BF778D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792AD5451D4699F700BF778D /* RegistrationViewController.swift */; };
@@ -20,6 +22,7 @@
 		7973443C1D450707009ABAFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7973443A1D450707009ABAFC /* Main.storyboard */; };
 		7973443E1D450707009ABAFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7973443D1D450707009ABAFC /* Assets.xcassets */; };
 		797344411D450707009ABAFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7973443F1D450707009ABAFC /* LaunchScreen.storyboard */; };
+		79CC44B51D49522700307C42 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CC44B41D49522700307C42 /* GlobalConstants.swift */; };
 		79FDFAD11D47F2B80089E623 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FDFAD01D47F2B80089E623 /* BaseModel.swift */; };
 		79FDFAD31D47F3E20089E623 /* CountriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FDFAD21D47F3E20089E623 /* CountriesModel.swift */; };
 		C9FAB9E69C48DED6168D8CFA /* Pods_Turjman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458CD914EF4C7D35D5ACDC16 /* Pods_Turjman.framework */; };
@@ -27,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		458CD914EF4C7D35D5ACDC16 /* Pods_Turjman.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Turjman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		790970C21D4AB79000EEAFB1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		790970C41D4AB95200EEAFB1 /* TurjmanError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurjmanError.swift; sourceTree = "<group>"; };
 		792AD53D1D46965A00BF778D /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		792AD53F1D4697BD00BF778D /* RegistrationStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationStore.swift; sourceTree = "<group>"; };
 		792AD5451D4699F700BF778D /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 		7973443D1D450707009ABAFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		797344401D450707009ABAFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		797344421D450707009ABAFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79CC44B41D49522700307C42 /* GlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		79FDFAD01D47F2B80089E623 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		79FDFAD21D47F3E20089E623 /* CountriesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesModel.swift; sourceTree = "<group>"; };
 		7A9FC309B3AC0B2BD052CED4 /* Pods-Turjman.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turjman.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Turjman/Pods-Turjman.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +75,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		790970C11D4AB77A00EEAFB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				790970C21D4AB79000EEAFB1 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		792AD53B1D4695F800BF778D /* Business Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +96,7 @@
 			children = (
 				792AD53D1D46965A00BF778D /* NetworkConstants.swift */,
 				792AD5471D46AA0600BF778D /* NetworkManager.swift */,
+				790970C41D4AB95200EEAFB1 /* TurjmanError.swift */,
 			);
 			name = "Network Layer";
 			sourceTree = "<group>";
@@ -135,6 +150,7 @@
 		797344351D450707009ABAFC /* Turjman */ = {
 			isa = PBXGroup;
 			children = (
+				79CC44B31D49521500307C42 /* Common Layer */,
 				79FDFACF1D47F2070089E623 /* DTOs */,
 				792AD53C1D46960300BF778D /* Network Layer */,
 				792AD53B1D4695F800BF778D /* Business Layer */,
@@ -147,6 +163,15 @@
 				797344421D450707009ABAFC /* Info.plist */,
 			);
 			path = Turjman;
+			sourceTree = "<group>";
+		};
+		79CC44B31D49521500307C42 /* Common Layer */ = {
+			isa = PBXGroup;
+			children = (
+				790970C11D4AB77A00EEAFB1 /* Models */,
+				79CC44B41D49522700307C42 /* GlobalConstants.swift */,
+			);
+			name = "Common Layer";
 			sourceTree = "<group>";
 		};
 		79FDFACF1D47F2070089E623 /* DTOs */ = {
@@ -292,7 +317,10 @@
 				7944B2611D455D2D00F2C008 /* LoginViewController.swift in Sources */,
 				79FDFAD11D47F2B80089E623 /* BaseModel.swift in Sources */,
 				792AD5481D46AA0600BF778D /* NetworkManager.swift in Sources */,
+				790970C51D4AB95200EEAFB1 /* TurjmanError.swift in Sources */,
 				79FDFAD31D47F3E20089E623 /* CountriesModel.swift in Sources */,
+				79CC44B51D49522700307C42 /* GlobalConstants.swift in Sources */,
+				790970C31D4AB79000EEAFB1 /* User.swift in Sources */,
 				792AD5401D4697BD00BF778D /* RegistrationStore.swift in Sources */,
 				792AD5461D4699F700BF778D /* RegistrationViewController.swift in Sources */,
 				797344371D450707009ABAFC /* AppDelegate.swift in Sources */,

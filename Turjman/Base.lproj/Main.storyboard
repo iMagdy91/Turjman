@@ -279,6 +279,7 @@
                         <outlet property="nameTextField" destination="J0H-Cb-bug" id="mV1-6z-OHO"/>
                         <outlet property="passwordTextField" destination="Og2-zH-bAM" id="ysT-yf-b6a"/>
                         <outlet property="phoneCodeTextField" destination="AvR-hV-L8x" id="4Vs-Lr-46T"/>
+                        <outlet property="selectCountryButton" destination="mG1-dK-5HT" id="DYS-53-kBk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iLB-bN-amC" userLabel="First Responder" sceneMemberID="firstResponder"/>

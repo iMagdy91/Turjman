@@ -6,6 +6,8 @@ target "Turjman" do
 pod 'ENSwiftSideMenu'
 pod 'AlamofireObjectMapper'
 pod 'Alamofire'
+pod 'SBPickerSelector'
+pod 'MBProgressHUD'
 
 end
 
