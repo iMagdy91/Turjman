@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Turjman/LoginViewController.swift"
-            timestampString = "491502238.811701"
+            timestampString = "491513954.876036"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "signIn(_:presentViewController:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Turjman/LoginViewController.swift"
-            timestampString = "491502238.811701"
+            timestampString = "491513954.876036"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "signIn(_:dismissViewController:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -153,13 +153,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Turjman/LoginStore.swift"
-            timestampString = "491505536.221124"
+            filePath = "Turjman/LoginViewController.swift"
+            timestampString = "491513954.876036"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "loginWithEmail(_:password:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "signInButtonPressed(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

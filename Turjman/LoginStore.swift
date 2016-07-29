@@ -7,9 +7,9 @@
 //
 
 import Foundation
-
+import ObjectMapper
 class LoginStore {
-    class func loginWithEmail(mail:String,password:String) {
+    class func loginWithEmail(mail:String,password:String,success:(LoginModel?)-> Void,failure:(NSError?)-> Void) {
         var dict = Dictionary<String, AnyObject>?()
         
         dict = ["email": mail,
@@ -17,7 +17,8 @@ class LoginStore {
                 "iemi_number": Device.udid]
         
         NetworkManager.performRequestWithPath(Network.loginPath, requestMethod: .POST, parameters: dict, headers: nil, success: { (response) in
-            let result = response?.description
+            let model = Mapper<LoginModel>().map(response)
+            success(model)
             }) { (error) in
                 
         }

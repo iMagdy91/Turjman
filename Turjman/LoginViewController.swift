@@ -34,7 +34,23 @@ class LoginViewController: BaseViewController,GIDSignInUIDelegate {
             showErrorMessage(errorMessage, title: "Validation Error")
         }
         else {
-            LoginStore.loginWithEmail(mailTextField.text!, password: passwordTextField.text!)
+            MBProgressHUD.showHUDAddedTo(view, animated: true)
+            LoginStore.loginWithEmail(mailTextField.text!, password: passwordTextField.text!, success: { (model) in
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                if let currentModel = model {
+                    User.sharedInstance.loginModel = currentModel
+                }
+                else {
+                    self.showErrorMessage("Incorrect Username or Password", title: "Error")
+
+                }
+                }, failure: { (error) in
+                    MBProgressHUD.hideHUDForView(self.view, animated: true)
+                    if let currentError = error{
+                        self.showErrorMessage(currentError.description, title: "Error")
+                        
+                    }
+            })
         }
     }
    

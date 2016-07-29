@@ -18,6 +18,7 @@
 		7944B2671D455EED00F2C008 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7944B2661D455EED00F2C008 /* MainNavigationController.swift */; };
 		7944B26D1D45625E00F2C008 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7944B26C1D45625E00F2C008 /* MenuTableViewController.swift */; };
 		7944B2701D456ACB00F2C008 /* TurjmanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7944B26F1D456ACB00F2C008 /* TurjmanButton.swift */; };
+		796651991D4BDEC70071E17E /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796651981D4BDEC70071E17E /* LoginModel.swift */; };
 		797344371D450707009ABAFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797344361D450707009ABAFC /* AppDelegate.swift */; };
 		7973443C1D450707009ABAFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7973443A1D450707009ABAFC /* Main.storyboard */; };
 		7973443E1D450707009ABAFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7973443D1D450707009ABAFC /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		7944B2661D455EED00F2C008 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		7944B26C1D45625E00F2C008 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		7944B26F1D456ACB00F2C008 /* TurjmanButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TurjmanButton.swift; sourceTree = "<group>"; };
+		796651981D4BDEC70071E17E /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		797344331D450707009ABAFC /* Turjman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turjman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		797344361D450707009ABAFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7973443B1D450707009ABAFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			children = (
 				79FDFAD01D47F2B80089E623 /* BaseModel.swift */,
 				79FDFAD21D47F3E20089E623 /* CountriesModel.swift */,
+				796651981D4BDEC70071E17E /* LoginModel.swift */,
 			);
 			name = DTOs;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				790970C51D4AB95200EEAFB1 /* TurjmanError.swift in Sources */,
 				79FDFAD31D47F3E20089E623 /* CountriesModel.swift in Sources */,
 				79CC44B51D49522700307C42 /* GlobalConstants.swift in Sources */,
+				796651991D4BDEC70071E17E /* LoginModel.swift in Sources */,
 				790970C31D4AB79000EEAFB1 /* User.swift in Sources */,
 				792AD5401D4697BD00BF778D /* RegistrationStore.swift in Sources */,
 				792AD5461D4699F700BF778D /* RegistrationViewController.swift in Sources */,

@@ -11,7 +11,20 @@ import Foundation
 class User {
     
     var userID: Int?
-    
+    var isLoggedIn: Bool = false
+    var loginModel: LoginModel? {
+        set(newValue) {
+            if let value = newValue {
+                self.isLoggedIn = true
+            }
+            else{
+               self.isLoggedIn = false
+            }
+        }
+        get{
+            return self.loginModel
+        }
+    }
     class var sharedInstance: User {
         struct Static {
             static let instance: User = User()
