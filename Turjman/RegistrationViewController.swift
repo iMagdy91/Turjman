@@ -26,6 +26,7 @@ class RegistrationViewController: BaseViewController,UIScrollViewDelegate,SBPick
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
@@ -40,12 +41,17 @@ class RegistrationViewController: BaseViewController,UIScrollViewDelegate,SBPick
             showErrorMessage(errorMessage, title: "Validation Error")
         }
         else {
-            RegistrationStore.registerUserWithFirstName(nameTextField.text!, company: companyNameTextField.text!, phoneCode: phoneCodeTextField.text, phone: contactPhoneTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, countryID: "10", iemeiNumber: Device.udid, success: { (userID) in
+            MBProgressHUD.showHUDAddedTo(view, animated: true)
+            RegistrationStore.registerUserWithFirstName(nameTextField.text!, company: companyNameTextField.text!, phoneCode: phoneCodeTextField.text, phone: contactPhoneTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, countryID: selectedCountry!.countryID!, success: { (userID) in
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+                User.sharedInstance.userID = userID
                 
                 }, failure: { (error) in
-                    
-                }, businessFailure: { (busniessError) in
-                    
+                    if let currentError = error{
+                        self.showErrorMessage(currentError.description, title: "Error")
+                    }
+                }, businessFailure: { (businessError) in
+                    self.showErrorMessage(businessError.errorDescription!, title: "Error")
             })
         }
     }
@@ -85,6 +91,9 @@ class RegistrationViewController: BaseViewController,UIScrollViewDelegate,SBPick
             return "Password and confirmation don't match"
     
         }
+        guard let country = selectedCountry else {
+            return "Please select a country"
+        }
 
         return nil
     }
@@ -116,6 +125,10 @@ class RegistrationViewController: BaseViewController,UIScrollViewDelegate,SBPick
         selectedCountry = countriesArray![idx]
         selectCountryButton.setTitle(value, forState: .Normal)
     }
+    
+    
+    
+
     /*
     // MARK: - Navigation
 

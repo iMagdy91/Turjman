@@ -25,6 +25,8 @@
 		79CC44B51D49522700307C42 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CC44B41D49522700307C42 /* GlobalConstants.swift */; };
 		79FDFAD11D47F2B80089E623 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FDFAD01D47F2B80089E623 /* BaseModel.swift */; };
 		79FDFAD31D47F3E20089E623 /* CountriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FDFAD21D47F3E20089E623 /* CountriesModel.swift */; };
+		79FF00531D4BA84800C7F62D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79FF00521D4BA84800C7F62D /* GoogleService-Info.plist */; };
+		79FF00551D4BB6FD00C7F62D /* LoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FF00541D4BB6FD00C7F62D /* LoginStore.swift */; };
 		C9FAB9E69C48DED6168D8CFA /* Pods_Turjman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 458CD914EF4C7D35D5ACDC16 /* Pods_Turjman.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		79CC44B41D49522700307C42 /* GlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		79FDFAD01D47F2B80089E623 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		79FDFAD21D47F3E20089E623 /* CountriesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountriesModel.swift; sourceTree = "<group>"; };
+		79FF00521D4BA84800C7F62D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		79FF00541D4BB6FD00C7F62D /* LoginStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginStore.swift; sourceTree = "<group>"; };
 		7A9FC309B3AC0B2BD052CED4 /* Pods-Turjman.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turjman.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Turjman/Pods-Turjman.debug.xcconfig"; sourceTree = "<group>"; };
 		C21BFB8ECC03CF1392F1923B /* Pods-Turjman.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turjman.release.xcconfig"; path = "Pods/Target Support Files/Pods-Turjman/Pods-Turjman.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				792AD53F1D4697BD00BF778D /* RegistrationStore.swift */,
+				79FF00541D4BB6FD00C7F62D /* LoginStore.swift */,
 			);
 			name = "Business Layer";
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 				7973443A1D450707009ABAFC /* Main.storyboard */,
 				7973443D1D450707009ABAFC /* Assets.xcassets */,
 				7973443F1D450707009ABAFC /* LaunchScreen.storyboard */,
+				79FF00521D4BA84800C7F62D /* GoogleService-Info.plist */,
 				797344421D450707009ABAFC /* Info.plist */,
 			);
 			path = Turjman;
@@ -253,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				797344411D450707009ABAFC /* LaunchScreen.storyboard in Resources */,
+				79FF00531D4BA84800C7F62D /* GoogleService-Info.plist in Resources */,
 				7973443E1D450707009ABAFC /* Assets.xcassets in Resources */,
 				7973443C1D450707009ABAFC /* Main.storyboard in Resources */,
 			);
@@ -314,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				792AD53E1D46965A00BF778D /* NetworkConstants.swift in Sources */,
+				79FF00551D4BB6FD00C7F62D /* LoginStore.swift in Sources */,
 				7944B2611D455D2D00F2C008 /* LoginViewController.swift in Sources */,
 				79FDFAD11D47F2B80089E623 /* BaseModel.swift in Sources */,
 				792AD5481D46AA0600BF778D /* NetworkManager.swift in Sources */,

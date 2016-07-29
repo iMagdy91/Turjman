@@ -12,4 +12,5 @@ struct Network {
    static let baseURL = "http://torjoman.com/dev-test/wp-content/themes/Avada/automatic/mobile-api/"
     static let countriesPath = "countries_list.php"
     static let registerPath = "register.php"
+    static let loginPath = "login.php"
 }

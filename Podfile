@@ -8,6 +8,7 @@ pod 'AlamofireObjectMapper'
 pod 'Alamofire'
 pod 'SBPickerSelector'
 pod 'MBProgressHUD'
+pod 'Google/SignIn'
 
 end
 

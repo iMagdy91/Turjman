@@ -62,6 +62,9 @@
                                     <constraint firstAttribute="width" constant="70" id="aGT-TT-RiQ"/>
                                 </constraints>
                                 <state key="normal" title="SIGN IN"/>
+                                <connections>
+                                    <action selector="signInButtonPressed:" destination="OLB-ry-dMp" eventType="touchUpInside" id="8Mv-Tl-qyk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2L-FI-JvU" customClass="TurjmanButton" customModule="Turjman" customModuleProvider="target">
                                 <rect key="frame" x="115" y="405" width="70" height="30"/>
@@ -73,18 +76,20 @@
                                     <segue destination="zbR-It-4LW" kind="show" id="xPD-DE-5qh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhX-Bb-4Zy" customClass="TurjmanButton" customModule="Turjman" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1IH-AZ-dUi" customClass="GIDSignInButton">
                                 <rect key="frame" x="415" y="405" width="70" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="FNY-4S-Pkp"/>
+                                    <constraint firstAttribute="height" constant="30" id="BcI-TC-8KT"/>
+                                    <constraint firstAttribute="width" constant="70" id="ujs-6o-y0e"/>
                                 </constraints>
-                                <state key="normal" title="Google"/>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vss-dq-iPJ" firstAttribute="leading" secondItem="BTg-7d-qlJ" secondAttribute="leading" constant="20" id="2oW-jH-0j9"/>
-                            <constraint firstItem="mhX-Bb-4Zy" firstAttribute="centerY" secondItem="r2L-FI-JvU" secondAttribute="centerY" id="3yY-XM-fNC"/>
+                            <constraint firstItem="1IH-AZ-dUi" firstAttribute="centerY" secondItem="r2L-FI-JvU" secondAttribute="centerY" id="4jd-iY-eua"/>
+                            <constraint firstItem="1IH-AZ-dUi" firstAttribute="centerY" secondItem="r2L-FI-JvU" secondAttribute="centerY" id="6Us-RK-pap"/>
                             <constraint firstItem="yYf-n6-LdS" firstAttribute="top" secondItem="vss-dq-iPJ" secondAttribute="bottom" constant="20" id="EXl-ZU-T8g"/>
                             <constraint firstItem="WeE-B8-qW2" firstAttribute="centerX" secondItem="BTg-7d-qlJ" secondAttribute="centerX" id="Ft5-OO-lZ9"/>
                             <constraint firstItem="DEy-Ok-lao" firstAttribute="top" secondItem="yYf-n6-LdS" secondAttribute="bottom" constant="8" id="IcK-wH-gDz"/>
@@ -93,17 +98,20 @@
                             <constraint firstItem="r2L-FI-JvU" firstAttribute="centerX" secondItem="BTg-7d-qlJ" secondAttribute="centerX" constant="0.25" id="Lu0-Ar-xG4"/>
                             <constraint firstItem="vss-dq-iPJ" firstAttribute="top" secondItem="6Py-Mc-GH1" secondAttribute="bottom" constant="165" id="LyU-P4-aAm"/>
                             <constraint firstAttribute="trailing" secondItem="DEy-Ok-lao" secondAttribute="trailing" constant="20" id="Pfs-Je-plt"/>
+                            <constraint firstItem="1IH-AZ-dUi" firstAttribute="centerX" secondItem="BTg-7d-qlJ" secondAttribute="centerX" multiplier="1.5" id="U05-do-r48"/>
                             <constraint firstAttribute="trailing" secondItem="yYf-n6-LdS" secondAttribute="trailing" constant="20" id="bUw-c8-foc"/>
+                            <constraint firstItem="1IH-AZ-dUi" firstAttribute="centerX" secondItem="BTg-7d-qlJ" secondAttribute="centerX" multiplier="1.5" id="c0S-nm-yMO"/>
                             <constraint firstItem="r2L-FI-JvU" firstAttribute="centerY" secondItem="BTg-7d-qlJ" secondAttribute="centerY" id="mDa-8E-VT9"/>
                             <constraint firstItem="r2L-FI-JvU" firstAttribute="centerX" secondItem="BTg-7d-qlJ" secondAttribute="centerX" multiplier="0.5" id="o5P-yQ-Ooq"/>
                             <constraint firstAttribute="trailing" secondItem="vss-dq-iPJ" secondAttribute="trailing" constant="20" id="oNP-Sn-ObI"/>
                             <constraint firstItem="r2L-FI-JvU" firstAttribute="top" secondItem="WeE-B8-qW2" secondAttribute="bottom" constant="20" id="ux6-8e-Zuj"/>
-                            <constraint firstItem="mhX-Bb-4Zy" firstAttribute="centerX" secondItem="BTg-7d-qlJ" secondAttribute="centerX" multiplier="1.5" id="vXH-34-0ZR"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Lu0-Ar-xG4"/>
                                 <exclude reference="mDa-8E-VT9"/>
+                                <exclude reference="4jd-iY-eua"/>
+                                <exclude reference="c0S-nm-yMO"/>
                             </mask>
                         </variation>
                     </view>
@@ -114,6 +122,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mailTextField" destination="vss-dq-iPJ" id="moL-cD-3NE"/>
+                        <outlet property="passwordTextField" destination="yYf-n6-LdS" id="2FK-yy-PPO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SqM-uh-dWk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

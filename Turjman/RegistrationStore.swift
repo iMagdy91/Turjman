@@ -11,7 +11,7 @@ import ObjectMapper
 
 class RegistrationStore {
     
-    class func registerUserWithFirstName(firstName: String, company: String, phoneCode: String?, phone: String, email: String, password: String, countryID: String, iemeiNumber: String, success:(Int) -> Void, failure:(NSError?) -> Void, businessFailure:(TurjmanError) -> Void){
+    class func registerUserWithFirstName(firstName: String, company: String, phoneCode: String?, phone: String, email: String, password: String, countryID: String, success:(Int) -> Void, failure:(NSError?) -> Void, businessFailure:(TurjmanError) -> Void){
         
         
         var dict = Dictionary<String, AnyObject>?()
@@ -24,7 +24,7 @@ class RegistrationStore {
                      "email": email,
                      "password": password,
                      "country_id": countryID,
-                     "iemi_number": iemeiNumber
+                     "iemi_number": Device.udid
             ]
         }
         else {
@@ -34,13 +34,13 @@ class RegistrationStore {
                      "email": email,
                      "password": password,
                      "country_id": countryID,
-                     "iemi_number": iemeiNumber
+                     "iemi_number": Device.udid
             ]
         }
         
       
         
-        NetworkManager.performRequestWithPath(Network.registerPath, requestMethod: .POST, parameters: dict, headers: nil, sucess: { (response) in
+        NetworkManager.performRequestWithPath(Network.registerPath, requestMethod: .POST, parameters: dict, headers: nil, success: { (response) in
             if let responseID = response {
                 let responseIdentifier = responseID as! Int
                 
@@ -63,7 +63,7 @@ class RegistrationStore {
     
     class func getCountriesListWithSuccess(success:([CountriesModel]?) -> Void, failure:(NSError?) -> Void){
     
-        NetworkManager.performRequestWithPath(Network.countriesPath, requestMethod:.GET, parameters: nil, headers: nil, sucess: { (response) in
+        NetworkManager.performRequestWithPath(Network.countriesPath, requestMethod:.GET, parameters: nil, headers: nil, success: { (response) in
             
             let list: Array<CountriesModel> = Mapper<CountriesModel>().mapArray(response)!
             success(list)

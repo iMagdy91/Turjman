@@ -11,7 +11,7 @@ import Alamofire
 
 class NetworkManager {
     
-    class func performRequestWithPath(path: String,requestMethod: Alamofire.Method ,parameters: [String : AnyObject]?,headers: [String : String]?, sucess:(AnyObject?) -> Void, failure:(NSError) ->Void){
+    class func performRequestWithPath(path: String,requestMethod: Alamofire.Method ,parameters: [String : AnyObject]?,headers: [String : String]?, success:(AnyObject?) -> Void, failure:(NSError) ->Void){
         
         let url = String(format: "%@%@", Network.baseURL,path)
         
@@ -22,7 +22,7 @@ class NetworkManager {
                 switch response.result {
                     
                 case .Success(_):
-                    sucess(response.result.value)
+                    success(response.result.value)
                 case .Failure(let error):
                     failure(error)
                 }
