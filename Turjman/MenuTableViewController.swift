@@ -9,10 +9,24 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
+    
+    
+    class var sharedInstance: MenuTableViewController {
+        struct Static {
+            static let instance: MenuTableViewController = MenuTableViewController()
+        }
+        return Static.instance
+    }
+    
+    let loggedOutMenu = ["Profile","Orders","Invoices","Notifications","Languages","Settings","FAQ","Contact Us", "About US"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Customize apperance of table view
+        tableView.contentInset = UIEdgeInsetsMake(64.0, 0, 0, 0) //
+        tableView.backgroundColor = UIColor.blueColor()
+        tableView.scrollsToTop = false
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -27,25 +41,33 @@ class MenuTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return loggedOutMenu.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        
+        let cellIdentifier = "menuCell"
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
+        if cell == nil {
+            cell = UITableViewCell.init(style: .Default, reuseIdentifier:cellIdentifier)
+        }
 
         // Configure the cell...
-
-        return cell
+        
+        cell!.textLabel?.text = loggedOutMenu[indexPath.row]
+        cell!.selectionStyle = .None
+        cell!.imageView?.image = nil
+        cell!.backgroundColor = UIColor.clearColor()
+        cell!.textLabel?.textColor = UIColor.whiteColor()
+        
+        return cell!
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

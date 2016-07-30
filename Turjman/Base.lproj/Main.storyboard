@@ -299,32 +299,32 @@
             <point key="canvasLocation" x="1334" y="360"/>
         </scene>
         <!--Menu Table View Controller-->
-        <scene sceneID="fqC-tI-xEU">
+        <scene sceneID="zsa-e6-Vdl">
             <objects>
-                <tableViewController id="zbP-MU-EMd" customClass="MenuTableViewController" customModule="Turjman" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Zc-RS-i7q">
+                <tableViewController id="jmU-5T-8Qb" customClass="MenuTableViewController" customModule="Turjman" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="N8l-Xf-hv0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mwL-pG-jIP">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HFH-TU-OhU" customClass="menuCell">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mwL-pG-jIP" id="zV5-32-KEj">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HFH-TU-OhU" id="aec-Xe-uyS">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="zbP-MU-EMd" id="nFh-ae-9FO"/>
-                            <outlet property="delegate" destination="zbP-MU-EMd" id="RDC-M9-wYI"/>
+                            <outlet property="dataSource" destination="jmU-5T-8Qb" id="KFe-PP-GiJ"/>
+                            <outlet property="delegate" destination="jmU-5T-8Qb" id="CiB-T3-Ulq"/>
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pZ4-uv-nfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U7P-sF-FoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2038" y="349"/>
+            <point key="canvasLocation" x="2759" y="319"/>
         </scene>
     </scenes>
 </document>

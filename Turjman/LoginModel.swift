@@ -32,7 +32,9 @@ class LoginModel: BaseModel {
     var authenticatedByApp: String?
     var accountManagerData: String?
     
-    
+    override init() {
+        super.init()
+    }
     
     required init?(_ map: Map) {
         super.init(map)

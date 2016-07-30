@@ -14,7 +14,8 @@ class MainNavigationController: ENSideMenuNavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sideMenu = ENSideMenu(sourceView: self.view, menuViewController: MenuTableViewController(), menuPosition:.Left)
+        sideMenu = ENSideMenu(sourceView: self.view, menuViewController: MenuTableViewController.sharedInstance, menuPosition:.Left)
+        
         view.bringSubviewToFront(navigationBar)
     }
 

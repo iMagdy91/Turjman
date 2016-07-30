@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class BaseModel: Mappable {
+class BaseModel:NSObject, Mappable {
     
     required init?(_ map: Map) {
         
@@ -17,5 +17,8 @@ class BaseModel: Mappable {
     
     func mapping(map: Map) {
         
+    }
+    override init() {
+
     }
 }
