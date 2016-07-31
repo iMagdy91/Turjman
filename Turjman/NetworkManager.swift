@@ -14,7 +14,7 @@ class NetworkManager {
     class func performRequestWithPath(path: String,requestMethod: Alamofire.Method ,parameters: [String : AnyObject]?,headers: [String : String]?, success:(AnyObject?) -> Void, failure:(NSError) ->Void){
         
         let url = String(format: "%@%@", Network.baseURL,path)
-        
+
         Alamofire.request(requestMethod, url, parameters: parameters, encoding: .URL, headers: headers)
         
             .responseJSON { (response) in

@@ -44,7 +44,6 @@ class RegistrationViewController: BaseViewController,UIScrollViewDelegate,SBPick
             MBProgressHUD.showHUDAddedTo(view, animated: true)
             RegistrationStore.registerUserWithFirstName(nameTextField.text!, company: companyNameTextField.text!, phoneCode: phoneCodeTextField.text, phone: contactPhoneTextField.text!, email: emailTextField.text!, password: passwordTextField.text!, countryID: selectedCountry!.countryID!, success: { (userID) in
                 MBProgressHUD.hideHUDForView(self.view, animated: true)
-                User.sharedInstance.isLoggedIn = true
                 
                 User.sharedInstance.userData.userID = String(userID)
                 User.sharedInstance.userData.firstName = self.nameTextField.text!
@@ -54,13 +53,14 @@ class RegistrationViewController: BaseViewController,UIScrollViewDelegate,SBPick
                 User.sharedInstance.userData.email = self.emailTextField.text!
                 User.sharedInstance.userData.password = self.passwordTextField.text
                 User.sharedInstance.userData.countryID = self.selectedCountry!.countryID!
+                
+                self.loginSucceeded()
 
 
                 }, failure: { (error) in
-                    if let currentError = error{
-                        self.showErrorMessage(currentError.description, title: "Error")
-                    }
+                    self.handleError(error)
                 }, businessFailure: { (businessError) in
+                    MBProgressHUD.hideHUDForView(self.view, animated: true)
                     self.showErrorMessage(businessError.errorDescription!, title: "Error")
             })
         }

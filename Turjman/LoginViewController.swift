@@ -38,9 +38,9 @@ class LoginViewController: BaseViewController,GIDSignInUIDelegate {
             LoginStore.loginWithEmail(mailTextField.text!, password: passwordTextField.text!, success: { (model) in
                 MBProgressHUD.hideHUDForView(self.view, animated: true)
                 if let currentModel = model {
-                    User.sharedInstance.isLoggedIn = true
                     
                     User.sharedInstance.userData = currentModel
+                    self.loginSucceeded()
              
                 }
                 else {
@@ -48,18 +48,13 @@ class LoginViewController: BaseViewController,GIDSignInUIDelegate {
 
                 }
                 }, failure: { (error) in
-                    MBProgressHUD.hideHUDForView(self.view, animated: true)
-                    if let currentError = error{
-                        self.showErrorMessage(currentError.description, title: "Error")
-                    }
+                    self.handleError(error)
             })
         }
     }
    
     
-    @IBAction func toggleSideMenu(sender: UIBarButtonItem) {
-        toggleSideMenuView()
-    }
+  
     
     func signInWillDispatch(signIn: GIDSignIn!, error: NSError!) {
         MBProgressHUD.hideHUDForView(view, animated: true)

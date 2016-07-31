@@ -18,7 +18,8 @@ class MenuTableViewController: UITableViewController {
         return Static.instance
     }
     
-    let loggedOutMenu = ["Profile","Orders","Invoices","Notifications","Languages","Settings","FAQ","Contact Us", "About US"]
+    let loggedOutMenu = ["Profile","Orders","Invoices","Notifications","Languages","Settings","FAQ","Contact Us", "About Us"]
+    let loggedInMenu = ["Profile","Orders","Invoices","Notifications","Languages","Settings","FAQ","Contact Us", "About Us","Change Password","Sign Out"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +46,12 @@ class MenuTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return loggedOutMenu.count
+        if (User.sharedInstance.isLoggedIn){
+            return loggedInMenu.count
+        }
+        else {
+            return loggedOutMenu.count
+        }
     }
 
     
@@ -58,16 +64,32 @@ class MenuTableViewController: UITableViewController {
         }
 
         // Configure the cell...
-        
-        cell!.textLabel?.text = loggedOutMenu[indexPath.row]
-        cell!.selectionStyle = .None
-        cell!.imageView?.image = nil
-        cell!.backgroundColor = UIColor.clearColor()
-        cell!.textLabel?.textColor = UIColor.whiteColor()
+        customizeCell(cell, forIndexPath: indexPath)
         
         return cell!
     }
     
+    func  customizeCell(cell:UITableViewCell?,forIndexPath indexPath:NSIndexPath){
+        if (User.sharedInstance.isLoggedIn){
+            if indexPath.row == 0 {
+                cell!.textLabel?.text = User.sharedInstance.userData.firstName
+                
+            }
+            else {
+                cell!.textLabel?.text = loggedInMenu[indexPath.row]
+                
+            }
+            
+        }
+        else {
+            cell!.textLabel?.text = loggedOutMenu[indexPath.row]
+        }
+        cell!.selectionStyle = .None
+        cell!.imageView?.image = nil
+        cell!.backgroundColor = UIColor.clearColor()
+        cell!.textLabel?.textColor = UIColor.whiteColor()
+        cell!.textLabel?.font = UIFont.systemFontOfSize(15.0)
+    }
 
     /*
     // Override to support conditional editing of the table view.

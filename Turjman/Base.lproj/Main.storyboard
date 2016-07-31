@@ -115,13 +115,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Sign In" id="46W-NO-3LE">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="qsg-Vp-daq">
-                            <connections>
-                                <action selector="toggleSideMenu:" destination="OLB-ry-dMp" id="Xa0-gF-x49"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Sign In" id="46W-NO-3LE"/>
                     <connections>
                         <outlet property="mailTextField" destination="vss-dq-iPJ" id="moL-cD-3NE"/>
                         <outlet property="passwordTextField" destination="yYf-n6-LdS" id="2FK-yy-PPO"/>

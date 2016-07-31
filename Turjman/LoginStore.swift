@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+
 class LoginStore {
     class func loginWithEmail(mail:String,password:String,success:(LoginModel?)-> Void,failure:(NSError?)-> Void) {
         var dict = Dictionary<String, AnyObject>?()
@@ -20,7 +21,7 @@ class LoginStore {
             let model = Mapper<LoginModel>().map(response)
             success(model)
             }) { (error) in
-                
+                failure(error)
         }
     }
 }

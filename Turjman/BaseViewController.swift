@@ -8,6 +8,7 @@
 
 import UIKit
 import ENSwiftSideMenu
+import MBProgressHUD
 
 class BaseViewController: UIViewController,ENSideMenuDelegate,UITextFieldDelegate {
 
@@ -36,8 +37,27 @@ class BaseViewController: UIViewController,ENSideMenuDelegate,UITextFieldDelegat
         navigationController!.navigationBar.titleTextAttributes = titleDict as? [String : AnyObject]
         navigationController!.navigationBar.tintColor = UIColor.whiteColor()
         navigationController!.navigationBar.barTintColor = UIColor.blueColor()
+        
+        
+        let btnName = UIButton()
+//        btnName.setImage(UIImage(named: "imagename"), forState: .Normal)
+        btnName.setTitle("Menu", forState: .Normal)
+        btnName.frame = CGRectMake(0, 0, 60, 30)
+        btnName.addTarget(self, action: #selector(toggleSideMenu), forControlEvents: .TouchUpInside)
+        
+        //.... Set Right/Left Bar Button item
+        let leftBarButton = UIBarButtonItem()
+        leftBarButton.customView = btnName
+        self.navigationItem.leftBarButtonItem = leftBarButton
+
+        
+//        let sideMenuButton = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: Selector("toggleSideMenu"))
+//        self.navigationItem.leftBarButtonItem = sideMenuButton
     }
- 
+    func toggleSideMenu(){
+        toggleSideMenuView()
+    }
+    
     func sideMenuWillOpen() {
         view.endEditing(true)
     }
@@ -55,6 +75,24 @@ class BaseViewController: UIViewController,ENSideMenuDelegate,UITextFieldDelegat
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func loginSucceeded(){
+        User.sharedInstance.isLoggedIn = true
+
+        let ordersStoryboard = UIStoryboard(name: "Orders", bundle: nil)
+        let ordersViewController = ordersStoryboard.instantiateViewControllerWithIdentifier("ordersViewController")
+        
+        sideMenuController()?.setContentViewController(ordersViewController)
+        toggleSideMenu()
+        MenuTableViewController.sharedInstance.tableView.reloadData()
+    }
+    
+    func handleError(error: NSError?){
+        MBProgressHUD.hideHUDForView(view, animated: true)
+        if let currentError = error{
+            self.showErrorMessage(currentError.description, title: "Error")
+        }
     }
 
 

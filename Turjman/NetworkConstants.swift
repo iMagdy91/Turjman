@@ -13,4 +13,5 @@ struct Network {
     static let countriesPath = "countries_list.php"
     static let registerPath = "register.php"
     static let loginPath = "login.php"
+    static let ordersPath = "orders.php"
 }

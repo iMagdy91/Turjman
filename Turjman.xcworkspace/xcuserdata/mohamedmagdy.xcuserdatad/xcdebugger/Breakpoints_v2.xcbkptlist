@@ -36,12 +36,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Turjman/LoginViewController.swift"
-            timestampString = "491606617.999658"
+            timestampString = "491679590.509385"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "signInButtonPressed(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Turjman.LoginViewController.(signInButtonPressed (Swift.AnyObject) -&gt; ()).(closure #1)"
+                  moduleName = "Turjman"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohamedmagdy/Developer/Turjman/Turjman/LoginViewController.swift"
+                  timestampString = "491686008.261441"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "567">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Turjman.LoginViewController.(signInButtonPressed (Swift.AnyObject) -&gt; ()).(closure #2)"
+                  moduleName = "Turjman"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohamedmagdy/Developer/Turjman/Turjman/LoginViewController.swift"
+                  timestampString = "491686008.261645"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Turjman/OrderStore.swift"
+            timestampString = "491683948.874121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "getOrderListWithSuccess(_:failure:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Turjman/OrderStore.swift"
+            timestampString = "491683952.202936"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getOrderListWithSuccess(_:failure:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
